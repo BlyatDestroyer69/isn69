@@ -1,0 +1,48 @@
+{
+    "name": "isn/attendance-system",
+    "description": "Sistem Kehadiran Baru ISN dengan pengesahan IC, ID, Face Scan dan integrasi SPSM",
+    "type": "project",
+    "keywords": ["attendance", "face-recognition", "geolocation", "spsm", "isn"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "ISN Development Team",
+            "email": "dev@isn.gov.my"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "ext-pdo": "*",
+        "ext-json": "*",
+        "ext-curl": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "phpstan/phpstan": "^1.0",
+        "squizlabs/php_codesniffer": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ISN\\Attendance\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ISN\\Attendance\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src tests",
+        "fix-style": "phpcbf src tests",
+        "analyze": "phpstan analyse src --level=8"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+} 
