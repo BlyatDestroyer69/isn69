@@ -1,0 +1,488 @@
+/* Sistem Kehadiran ISN - Main Stylesheet */
+
+:root {
+    --primary-color: #2563eb;
+    --primary-dark: #1d4ed8;
+    --secondary-color: #64748b;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --danger-color: #dc2626;
+    --light-color: #f8fafc;
+    --dark-color: #1e293b;
+    --border-color: #e2e8f0;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Login Container */
+.login-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    max-width: 900px;
+    margin: 50px auto;
+    display: flex;
+    min-height: 600px;
+}
+
+.logo {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+}
+
+.logo i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.logo h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.logo p {
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+.login-form {
+    flex: 1;
+    padding: 60px 40px;
+    background: white;
+}
+
+.login-form h2 {
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--dark-color);
+    font-size: 0.95rem;
+}
+
+.form-group label i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--light-color);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-group input:invalid {
+    border-color: var(--danger-color);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    gap: 10px;
+    width: 100%;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-success {
+    background: var(--success-color);
+    color: white;
+}
+
+.btn-warning {
+    background: var(--warning-color);
+    color: white;
+}
+
+.btn-danger {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* Info Box */
+.info-box {
+    background: var(--light-color);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.info-box h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-box li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--secondary-color);
+}
+
+.info-box li:last-child {
+    border-bottom: none;
+}
+
+.info-box li:before {
+    content: "✓";
+    color: var(--success-color);
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* Dashboard Styles */
+.dashboard {
+    background: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow-lg);
+    padding: 40px;
+    margin: 20px 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.dashboard-header h1 {
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.user-info {
+    text-align: right;
+}
+
+.user-info .employee-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.user-info .employee-details {
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+/* Attendance Controls */
+.attendance-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.attendance-btn {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.attendance-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.clock-in-btn {
+    background: linear-gradient(135deg, var(--success-color), #10b981);
+    color: white;
+    border-color: var(--success-color);
+}
+
+.clock-out-btn {
+    background: linear-gradient(135deg, var(--warning-color), #f59e0b);
+    color: white;
+    border-color: var(--warning-color);
+}
+
+.attendance-btn i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.attendance-btn h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.attendance-btn p {
+    opacity: 0.9;
+    font-size: 0.9rem;
+}
+
+/* Status Indicators */
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.status-clocked-in {
+    background: rgba(5, 150, 105, 0.1);
+    color: var(--success-color);
+}
+
+.status-clocked-out {
+    background: rgba(217, 119, 6, 0.1);
+    color: var(--warning-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .login-container {
+        flex-direction: column;
+        margin: 20px;
+        min-height: auto;
+    }
+    
+    .logo, .login-form {
+        padding: 40px 20px;
+    }
+    
+    .attendance-controls {
+        grid-template-columns: 1fr;
+    }
+    
+    .dashboard {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    .dashboard-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
+
+/* Loading States */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid currentColor;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Face Scan Styles */
+.face-scan-container {
+    text-align: center;
+    padding: 40px;
+}
+
+.camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+#video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.camera-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid var(--primary-color);
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+.scan-instructions {
+    background: var(--light-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.scan-instructions h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.scan-instructions ul {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+}
+
+.scan-instructions li {
+    padding: 8px 0;
+    color: var(--secondary-color);
+}
+
+.scan-instructions li:before {
+    content: "📷";
+    margin-right: 10px;
+}
+
+/* Geolocation Warning */
+.geo-warning {
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid var(--danger-color);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    color: var(--danger-color);
+    text-align: center;
+}
+
+.geo-warning i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.geo-warning h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* Success/Error Messages */
+.message {
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.message.success {
+    background: rgba(5, 150, 105, 0.1);
+    border: 1px solid var(--success-color);
+    color: var(--success-color);
+}
+
+.message.error {
+    background: rgba(220, 38, 38, 0.1);
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+}
+
+.message.warning {
+    background: rgba(217, 119, 6, 0.1);
+    border: 1px solid var(--warning-color);
+    color: var(--warning-color);
+} 
